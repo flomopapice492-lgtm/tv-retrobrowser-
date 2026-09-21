@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10131c" />
+  <title>RetroBrowser TV — Rewind the signal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="RetroBrowser TV home"><span class="brand-mark">RB</span><span>RETRO<span class="muted">BROWSER</span><i>TV</i></span></a>
+    <nav><a href="#guide">Guide</a><a href="#networks">Networks</a><a href="#about">About</a></nav>
+    <button class="top-action" id="randomBtn">✦ Surprise me</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> Broadcasting from the archive</p><h1>Rewind the<br /><em>signal.</em></h1><p class="lede">A curated time machine for the television that shaped us. Jump between eras, find a channel, and press play.</p><div class="hero-buttons"><a class="button primary" href="#guide">Explore the guide <span>↓</span></a><button class="button ghost" id="aboutBtn">How it works</button></div></div>
+      <div class="hero-art" aria-label="Illustration of a retro television"><div class="scan-lines"></div><div class="tv-set"><div class="tv-screen"><div class="screen-content"><span class="screen-channel">RB / 04</span><strong id="heroYear">2004</strong><small>ON AIR</small></div></div><div class="tv-controls"><span></span><span></span><b>◉</b></div><div class="tv-feet"><i></i><i></i></div></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="sticker">NO<br />SKIP</span></div>
+    </section>
+
+    <section class="guide-section" id="guide">
+      <div class="section-heading"><div><p class="eyebrow">01 / Browse by time</p><h2>Pick a year.<br /><em>Find a feeling.</em></h2></div><div class="date-control"><label for="datePicker">Your memory lane</label><input type="date" id="datePicker" value="2004-06-15" min="2000-01-01" max="2019-12-31" /></div></div>
+      <div class="era-tabs" role="tablist"><button class="era active" data-era="all">All years <small>2000—19</small></button><button class="era" data-era="2000">The 00s <small>2000—09</small></button><button class="era" data-era="2010">The 10s <small>2010—19</small></button></div>
+      <div class="guide-grid" id="showGrid"></div>
+    </section>
+
+    <section class="player-section" id="playerSection"><div class="player-wrap"><div class="player-meta"><p class="eyebrow">Now playing <span class="equalizer"><i></i><i></i><i></i></span></p><h2 id="playerTitle">Select something to start watching</h2><p id="playerDescription">Your selected program will appear here.</p></div><div class="player-shell"><video id="videoPlayer" controls playsinline poster="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1200&q=80"><source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" /></video><div class="player-overlay" id="playerOverlay"><span class="play-icon">▶</span><p>Choose a program above<br /><small>or play the included preview reel</small></p></div></div><div class="player-footer"><span id="playerNetwork">RETROBROWSER TV · ARCHIVE FEED</span><span>◉ <b>STEREO</b> &nbsp; 480P</span></div></div></section>
+
+    <section class="networks-section" id="networks"><div class="section-heading"><div><p class="eyebrow">02 / The dial</p><h2>Classic<br /><em>networks.</em></h2></div><p class="section-note">A hand-picked lineup of broadcast identities from the era. Select a network to filter the guide.</p></div><div class="network-grid" id="networkGrid"></div></section>
+
+    <section class="about-section" id="about"><div class="about-number">03</div><div><p class="eyebrow">Built for the rewind</p><h2>Television was<br /><em>an event.</em></h2></div><div class="about-copy"><p>RetroBrowser is a lovingly curated index of the shows, idents, and channels that lived rent-free in our heads.</p><p class="tiny">This prototype uses a modern HTML5 player. Adobe Flash Player was discontinued in 2020 and cannot be safely installed or used in current browsers. Add licensed HLS/MP4 sources in <code>app.js</code> to connect your own archive or live feeds.</p></div></section>
+  </main>
+  <footer><span>© 2024 RETROBROWSER TV</span><span>MADE FOR THE NOSTALGIC</span><a href="#top">BACK TO TOP ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
